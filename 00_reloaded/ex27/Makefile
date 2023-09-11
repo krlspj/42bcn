@@ -5,35 +5,28 @@
 #                                                     +:+ +:+         +:+      #
 #    By: cpujades <cpujades@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/09/10 19:39:08 by cpujades          #+#    #+#              #
-#    Updated: 2023/09/10 19:39:27 by cpujades         ###   ########.fr        #
+#    Created: 2023/09/12 00:55:05 by cpujades          #+#    #+#              #
+#    Updated: 2023/09/12 00:55:09 by cpujades         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-.PHONY: all clean fclean re
-
 NAME = ft_display_file
-
-CC = gcc
-
-FLAGS = -Wall -Wextra -Werror
 
 SRC = main.c
 
-OBJ = $(SRC:.c=.o)
+OFILES = main.o
 
-all: $(NAME)
+all : $(NAME)
 
-$(NAME): $(OBJ)
-	$(CC) $(FLAGS) $(OBJ) -o $(NAME)
 
-%.o: %.c
-	$(CC) $(FLAGS) -c $<
+$(NAME) :
+	gcc -Wall -Wextra -Werror -c $(SRC)
+	gcc -o $(NAME) $(OFILES)
 
-clean:
-	rm -rf $(OBJ)
+clean :
+	rm -f $(OFILES)
 
-fclean: clean
-	rm -rf $(NAME)
+fclean : clean
+	rm -f $(NAME)
 
-re: fclean all
+re : fclean all

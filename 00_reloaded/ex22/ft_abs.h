@@ -6,11 +6,11 @@
 /*   By: cpujades <cpujades@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 17:43:35 by cpujades          #+#    #+#             */
-/*   Updated: 2023/09/10 17:53:54 by cpujades         ###   ########.fr       */
+/*   Updated: 2023/09/12 00:46:07 by cpujades         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_ABS_H
 # define FT_ABS_H
-# define ABS(Value) ((Value > 0) * Value + (Value < 0) * (value * -1))
+# define ABS(Value) ((Value > 0) * Value + (Value < 0) * (Value * -1))
 #endif
